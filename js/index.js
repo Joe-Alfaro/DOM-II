@@ -42,7 +42,17 @@ input[0].addEventListener('keydown', function(e){
 
 
 //FOCUS
-
+const pics = document.getElementsByTagName("img");
+window.addEventListener('focus', function(e){
+  for(let i = 0; i < pics.length; i++){
+    pics[i].style.filter = "blur(0px)";
+  }
+})
+window.addEventListener('blur', function(e){
+  for(let i = 0; i < pics.length; i++){
+   pics[i].style.filter = "blur(5px)";
+  }
+})
 
 //RESIZE
 
